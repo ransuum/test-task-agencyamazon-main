@@ -45,7 +45,7 @@ public class CampaignStatService {
     for (SPCampaignReport report : reports) {
       Long campaignId = report.getCampaignId();
 
-      campaignAnalyticMap.merge(campaignId, new SPCampaignStatistic(report), SPCampaignStatistic::add);
+      campaignAnalyticMap.merge(campaignId, new SPCampaignStatistic(report), SPCampaignStatistic::add); // there issue merge change
     }
 
     // Get all enabled SP campaigns by profile and portfolio
